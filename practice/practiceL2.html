@@ -23,6 +23,20 @@
     <br>
     <!-- Start your HTML code here -->
     <div>
+        <h1 class="text-center">Hello World
+        <p class="text-center">This is an example of a </p>
+        <div class="form-fields">
+            <div class="form control row"
+            <label class="fw-bold">Show:</label>
+            <input id="num" type="number" class="form-control">
+            <button class="btn btn-primary" type="button" onclick="timeTable()"></button>"
+        </div>
+
+
+
+
+
+        </h1>
         <h1 class="text-center">Hello, World!</h1>
         <p class="text-center">This is an example paragraph. Replace it with your content.</p>
         <label class="fw-bold">Age</label>
@@ -51,10 +65,27 @@
         
         
     </div>
+
+    <div class="form-fields">
+        <div class="form-control row">
+            <label class="fw-bold">Show:</label>
+            <input id="num" type="number" class="form-control">
+            <button class="btn btn-primary" type="button" onclick="timeTable()">Show</button>
+        </div>
+    </div>
+
+    <div id="practice"></div>
     <!-- End your HTML code here -->
     <script>
         // Add your custom JavaScript here
-        console.log("Hello World!")
+        let timeTable = () => {
+            $("#practice").empty();
+            let getval = parseInt($("#num").val());
+            for(let i = 1; i < getval; i++){
+                $("#practice").append('<p>'+ getval + ' x ' + i +' = '+ (i*getval) +'</p>');
+            }
+        };
+
     </script>
 </body>
 </html>
