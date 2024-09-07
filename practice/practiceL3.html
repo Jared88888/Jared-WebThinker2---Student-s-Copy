@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice HTML</title>
+    <link href="script/bootstrap.css" rel="stylesheet">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/bootstrap.js"></script>
+    <style>
+        /* Add your custom CSS here */
+        .top-left-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <a href="../index.html" class="btn btn-primary top-left-button">Back to Index</a>
+    </div>
+    <br>
+    <!-- Start your HTML code here -->
+    <div>
+        <button class="btn btn-primary" type ="button" onclick = "Add()"
+    <!-- End your HTML code here -->
+    <script>
+        let Guess = () => {
+            let userprompt = 0;
+            let num1 = Math.floor(Math.random() *11);
+            do{
+                userprompt = prompt("Guess a number between 1 to 10");
+            }
+            while(userprompt == num1)
+            $(".guess").html('<div class="bg-success text-center"><h1 style="color:white;">You are correct!</h1></div>');
+        };
+
+        Guess();
+
+      let Add = () => {
+
+         $(".history div").empty();
+        while (true){
+            let num1 = Math.random();
+            let num2 = Math.random();
+            let userprompt = parseFloat(prompt('What is' + num1 + '+' + num2 + '?'));
+
+            if(userprompt == 0){
+                break;
+            }
+
+            //apend
+            $(".history").append('<p>' + num1 + '+' + num2 + '=' + userprompt + '</p>');
+
+        }
+      };
+        }
+      }
+    </script>
+</body>
+</html>
