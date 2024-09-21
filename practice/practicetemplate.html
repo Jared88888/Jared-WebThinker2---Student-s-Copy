@@ -28,7 +28,68 @@
     </div>
     <!-- End your HTML code here -->
     <script>
+    <div>
+        <form>
+            <div class="row">
+                <div class="col-6"
+                    <label>Fruit selection</label>
+                    <input id ="fruitQty" type="text" class="form-control">
+                </div>
+        <table class="table">
+            <tr>
+                <th colspan="2">
+                    Fruits for sale
+                    <th>
+                </tr>
+                    
+            <tr>
+                <th>Fruit</th>
+                <th>Unit Price<th>
+            </tr>
+        </table>
+    </div>
+          
+
+    </script>
         // Add your custom JavaScript here
+        
+        let fruit = ["Apple", "Orange", "Banana", "Pineapple"];
+        let fruitPrice = ["$0.80", "$1.45", "$3.25", "$2.85"];
+
+
+        for(let i = 0; i < fruitPrice.length; i++){
+            $(".table").append('<tr><td>' + fruit[1] + '</td></td>' +fruitPrice[i] +'</td></tr>');
+            console.log("The price " + fruit[i] + "is" + fruitPrice[i]);
+        }
+
+        
+        for(let i = 0; i < fruitPrice.length; i++){
+            console.log("The price of" + fruit[1] + "is" + fruitPrice[i]);
+        }
+l
+        console.log(fruit.indexOf("Grapes"));
+        console.log(fruit.indexOf("Durian"));
+        console.log(fuit.indexOf("Pineapple"));
+
+        console.log("The price of" + fruit[1] + "is" + fruitPrice[1]);
+
+        fruit.pop();
+        fruitPrice.pop();
+        console.log(fruit);
+
+        fruit.shift();
+        fruitPrice.shift();
+        console.log(fruit)
+
+        fruit.push("Durian");
+        fruitPrice.push($12);
+        console.log(fruit);
+
+        fruit.unshift("Coconut");
+        fruitPrice.unshift($3.95)
+        console.log(fruit);
+
+
     </script>
 </body>
 </html>
