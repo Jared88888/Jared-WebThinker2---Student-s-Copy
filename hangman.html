@@ -38,20 +38,21 @@
 		</div>
 		<!-- Start of coding region -->
 		<div class="row">
-			<div class = col>
-			<img src="img/hangman-7.svg" alt="hangman">
+			<div class="col-md-3 d-flex align-items-center justify-content-center mb-3 mb-0">
+				<img id="life" src="img/hangman-7.svg" alt="hangman">
 			</div>
-		
-			<div class = col >
-				<p>Incorrect Guesses</p>
-				<input type ="text" placeholder="Enter a letter">
-			</div>
-			<div>
-				<input type = "text" id ="guessInput" maxlength="1" placeholder="Enter a letter">
-				<button onClick="submitGuess()">Submit</button>
-			</div>
-			<div>
-				<button onClick ="newGame()">New Game</button>
+			<div class="col-md-9">
+				<div class="d-flex justify-content-center flex-wrap" id="hint"></div>
+				<div>
+					<p>Incorrect Guesses: <span id="incorrectGuesses"></span></p>
+				</div>
+				<div class="d-flex justify-content-center">
+					<input class="form-control" type="text" id="guessInput" maxlength="1" placeholder="Enter a letter">
+					<button class="btn btn-primary ml-3" onclick="submitGuess()">Submit</button>
+				</div>
+				<div>
+					<button class="btn btn-primary my-3" onclick="newGame()">New Game</button>
+				</div>
 			</div>
 		</div>
 		<!-- End of coding region -->
