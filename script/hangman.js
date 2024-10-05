@@ -255,7 +255,30 @@ const WORDS = ["BRAZIL",
         }
     };
     
+    let updateWrongGuess = () => {
+        $('#incorrectGuesses').html(INCORRECT_GUESSES.join(','))
+        $('#life').attr('src', `img/hangman-${LIFE}.svg`);
+    }
+
+    let showAnswer = () => {
+        for (let i = 0; i < WORD.length; i++) {
+        if (WORD[i] == " ") $('#hint').append(`<div class="fs-4 fw-bold p-3 m-1"> </div>`);
+        else  $('#hint').append(`<div class="card border-dark fs-4 fw-bold p-3 m-1">${WORD[i]}</div>`);
+    }
+}
+
+
+
+
     
     const newGame = () => {
         location.reload();
     };
+
+
+
+
+
+
+
+
